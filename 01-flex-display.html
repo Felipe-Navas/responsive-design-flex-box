@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Display flex</title>
+    <style>
+      .container {
+        width: 400px;
+        height: 250px;
+        background-color: gray;
+      }
+      .item {
+        width: 100px;
+        height: 100px;
+        background-color: aqua;
+        margin: 10px;
+      }
+      .block {
+        display: block;
+      }
+      .flex {
+        display: flex;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Display block: value for default</h1>
+    <div class="container block">
+      <div class="item">Item 1</div>
+      <div class="item">Item 2</div>
+      <div class="item">Item 3</div>
+    </div>
+
+    <h1>Display flex</h1>
+    <div class="container flex">
+      <div class="item">Item 4</div>
+      <div class="item">Item 5</div>
+      <div class="item">Item 6</div>
+    </div>
+  </body>
+</html>
