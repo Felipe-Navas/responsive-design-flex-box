@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex Margin</title>
+    <style>
+      body {
+        text-align: center;
+      }
+      .container {
+        width: 400px;
+        height: 250px;
+        background-color: gray;
+        display: flex;
+        margin: 0 auto;
+      }
+      .item {
+        width: 100px;
+        height: 100px;
+        background-color: aquamarine;
+      }
+      .item:first-child {
+        margin-right: auto;
+      }
+      .item:last-child {
+        margin-left: auto;
+      }
+      nav > ul {
+        display: flex;
+        list-style: none;
+      }
+      nav > ul li:last-child {
+        margin-left: auto;
+      }
+
+    </style>
+  </head>
+  <body>
+    <h1>Examples of Display flex -> Property 'margin'</h1>
+
+    <h2>Margin</h2>
+    <div class="container">
+      <div class="item">Item1</div>
+      <div class="item">Item2</div>
+      <div class="item">Item3</div>
+    </div>
+    <hr />
+
+    <nav>
+      <ul>
+        <li>First</li>
+        <li>Second</li>
+        <li>Third</li>
+        <li>Fourth</li>
+      </ul>
+    </nav>
+
+  </body>
+</html>
