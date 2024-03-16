@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive with flex</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-size: 24px;
+        background: gray;
+      }
+      h2,
+      h3 {
+        text-align: center;
+      }
+      p {
+        text-align: justify;
+        padding: 16px;
+      }
+      main {
+        min-height: 680px;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-flow: row;
+      }
+      main > article {
+        margin: 4px;
+        padding: 5px;
+        border-radius: 7px;
+        border: 1px solid black;
+        background: #b49197;
+        flex: 3 1 60%;
+        order: 2;
+      }
+      main > nav {
+        margin: 4px;
+        padding: 5px;
+        border-radius: 7px;
+        border: 1px solid black;
+        background: #dc9eaa;
+        flex: 1 6 20%;
+        order: 1;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+      }
+      main > aside {
+        margin: 4px;
+        padding: 5px;
+        border-radius: 7px;
+        border: 1px solid black;
+        background: #dc9eaa;
+        flex: 1 6 20%;
+        order: 3;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+      }
+      header,
+      footer {
+        display: block;
+        margin: 4px;
+        padding: 5px;
+        border-radius: 7px;
+        border: 1px solid black;
+        background: #927375;
+        min-height: 40px;
+      }
+      .letters {
+        font-size: 16px;
+      }
+      @media all and (max-width: 800px) {
+        main {
+          flex-flow: column;
+        }
+        main article,
+        main nav,
+        main aside {
+          order: 0;
+        }
+        img {
+          flex: 2;
+        }
+        header,
+        footer {
+          min-height: 40px;
+          max-height: 40px;
+        }
+      }
+      @media all and (max-width: 600px) {
+        main nav, main aside {
+          min-height: 200px;
+          flex-flow: row;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h2>This is the header</h2>
+    </header>
+    <main>
+      <article>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+          officiis incidunt, magni deserunt accusantium nam? Qui quisquam quasi
+          repudiandae similique ex eligendi dicta, error, sequi esse quo vitae,
+          dolore odit.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+          officiis incidunt, magni deserunt accusantium nam? Qui quisquam quasi
+          repudiandae similique ex eligendi dicta, error, sequi esse quo vitae,
+          dolore odit.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+          officiis incidunt, magni deserunt accusantium nam? Qui quisquam quasi
+          repudiandae similique ex eligendi dicta, error, sequi esse quo vitae,
+          dolore odit.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+          officiis incidunt, magni deserunt accusantium nam? Qui quisquam quasi
+          repudiandae similique ex eligendi dicta, error, sequi esse quo vitae,
+          dolore odit.
+        </p>
+      </article>
+      <nav class="letters">
+        <img
+          src="https://images.freeimages.com/images/large-previews/bc4/curious-bird-1-1374322.jpg"
+          width="300px"
+        />
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+          officiis incidunt, magni deserunt accusantium nam? Qui quisquam quasi
+          repudiandae similique ex eligendi dicta, error, sequi esse quo vitae,
+          dolore odit.
+        </p>
+      </nav>
+      <aside class="letters">
+        <img
+          src="https://images.freeimages.com/images/large-previews/56d/peacock-1169961.jpg"
+          width="300px"
+        />
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+          officiis incidunt, magni deserunt accusantium nam? Qui quisquam quasi
+          repudiandae similique ex eligendi dicta, error, sequi esse quo vitae,
+          dolore odit.
+        </p>
+      </aside>
+    </main>
+    <footer><h3>All rights reserved &copy;</h3></footer>
+  </body>
+</html>
