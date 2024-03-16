@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex Shrink</title>
+    <style>
+      body {
+        text-align: center;
+      }
+      .container {
+        width: 400px;
+        height: 250px;
+        background-color: gray;
+        display: flex;
+        margin: 0 auto;
+        align-items: center;
+      }
+      .item {
+        width: 150px;
+        height: 150px;
+      }
+      .green {
+        background-color: green;
+      }
+      .red {
+        background-color: red;
+        flex-shrink: 6;
+      }
+      .blue {
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Examples of Display flex -> Property 'flex-shrink'</h1>
+
+    <h2>Flex Shrink</h2>
+    <div class="container">
+      <div class="item green">Item1</div>
+      <div class="item red">Item2</div>
+      <div class="item blue">Item3</div>
+    </div>
+    <hr />
+  </body>
+</html>
