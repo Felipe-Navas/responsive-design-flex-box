@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flex Responsive Menu</title>
+  <style>
+    nav {
+      background: orange;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: space-around;
+    }
+    nav a{
+      color: #333333;
+      display: block;
+      text-decoration: none;
+      text-align: center;
+      padding: 1em;
+    }
+    div {
+      flex: 1 1 auto;
+    }
+    div:hover {
+      background: yellow;
+    }
+    @media all and (max-width: 600px) {
+      nav {
+        flex-flow: column wrap;
+        padding: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div><a href="#">Home</a></div>
+    <div><a href="#">Products</a></div>
+    <div><a href="#">Blog</a></div>
+    <div><a href="#">Books</a></div>
+    <div><a href="#">Contact</a></div>
+  </nav>
+
+</body>
+</html>

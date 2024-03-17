@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex Responsive Menu Icons</title>
+    <script
+      src="https://kit.fontawesome.com/0d1b9a5725.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        font-size: 12px;
+        background: darkgray;
+      }
+      body {
+        width: 80%;
+        margin: 50px auto;
+      }
+      section {
+        padding-bottom: 2rem;
+        margin-bottom: 2rem;
+        font-size: 2rem;
+      }
+      nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        background-color: #dce1ec;
+      }
+      nav li a {
+        text-decoration: none;
+        color: #353b48;
+        padding: 0.6rem 1rem;
+        display: block;
+        transition: all 1s ease;
+      }
+      nav li a:hover {
+        background-color: #f5f6fa;
+      }
+      @media screen and (min-width: 600px) {
+        nav ul {
+          display: flex;
+          flex-wrap: wrap;
+        }
+        nav ul li {
+          flex: 1 0 20rem;
+          display: flex;
+        }
+      }
+      nav ul a {
+        display: flex;
+        flex: 1;
+      }
+      nav .icon {
+        flex-basis: 5rem;
+        font-size: 3rem;
+      }
+      .text {
+        font-size: 2rem;
+        font-weight: bold;
+      }
+      .text span {
+        display: block;
+        font-weight: lighter;
+        font-size: 1.5rem;
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <nav>
+        <ul>
+          <li>
+            <a href="#">
+              <div class="icon">
+                <i class="fas fa-book"></i>
+              </div>
+              <div class="text">Books <span>technical texts</span></div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="icon">
+                <i class="fas fa-camera"></i>
+              </div>
+              <div class="text">Pictures <span>best pictures</span></div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="icon">
+                <i class="fas fa-film"></i>
+              </div>
+              <div class="text">Films <span>best films</span></div>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </section>
+  </body>
+</html>

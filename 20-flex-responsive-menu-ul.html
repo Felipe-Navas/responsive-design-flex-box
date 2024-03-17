@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex Responsive Menu UL</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        font-size: 12px;
+      }
+      body {
+        background: gray;
+        width: 90rem;
+        margin: 100px auto;
+      }
+      section {
+        padding-bottom: 2rem;
+        margin-bottom: 2rem;
+        font-size: 2rem;
+      }
+      nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        background-color: #dcdde1;
+      }
+      nav li a {
+        text-decoration: none;
+        color: #353b48;
+        padding: 0.6rem 1rem;
+        display: block;
+        transition: all 0.5s ease;
+      }
+      nav li a:hover {
+        background-color: white;
+      }
+      @media screen and (min-width: 60rem) {
+        nav ul {
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          text-align: center;
+        }
+        nav ul li {
+          flex: 1 0 auto;
+          font-size: 2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="center">
+        <section>
+          <nav>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Posts</a></li>
+              <li><a href="#">Articles</a></li>
+              <li><a href="#">Books</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">About</a></li>
+            </ul>
+          </nav>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
