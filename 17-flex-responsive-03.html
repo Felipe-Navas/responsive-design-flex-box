@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive with flex</title>
+    <style>
+      body {
+        margin: 0;
+        background: gray;
+      }
+      section {
+        display: flex;
+        flex-flow: row wrap;
+        margin: 5%;
+      }
+      section > div {
+        flex: auto;
+        width: 200px;
+      }
+      section > div > img {
+        width: 100%;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div><img src="backgrounds/background1.jpg" /></div>
+      <div><img src="backgrounds/background2.jpg" /></div>
+      <div><img src="backgrounds/background3.jpg" /></div>
+      <div><img src="backgrounds/background4.jpg" /></div>
+      <div><img src="backgrounds/background5.jpg" /></div>
+      <div><img src="backgrounds/background6.jpg" /></div>
+      <div><img src="backgrounds/background1.jpg" /></div>
+      <div><img src="backgrounds/background2.jpg" /></div>
+      <div><img src="backgrounds/background3.jpg" /></div>
+      <div><img src="backgrounds/background4.jpg" /></div>
+      <div><img src="backgrounds/background5.jpg" /></div>
+      <div><img src="backgrounds/background6.jpg" /></div>
+    </section>
+  </body>
+</html>
