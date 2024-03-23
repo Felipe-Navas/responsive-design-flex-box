@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+}
+body {
+  color: black;
+  font-size: 1rem;
+  line-height: 1.5;
+  background-color: #ededed;
+}
+header,
+footer {
+  background-color: green;
+  height: 6.25rem;
+}
+aside {
+  background-color: darkorange;
+  color: white;
+}
+h1 {
+  color: orange;
+}
+p {
+}
+/* Header */
+header {
+  height: 400px;
+  display: flex;
+  flex-flow: column;
+  background-image: url(./backgrounds/background6.jpg);
+}
+.header {
+  flex-grow: 1;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+.header-title {
+  margin: 0;
+  font-size: 4rem;
+  font-weight: 300;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+}
+.header-lema {
+  text-align: center;
+  color: #f6d200;
+  font-size: 1.5rem;
+  margin-top: 0;
+  font-style: italic;
+}
+nav {
+  padding: 1rem;
+  color: black;
+  background-color: orange;
+}
+/* Contents */
+main {
+  padding: 2rem;
+}
+.course {
+  background-color: white;
+  margin-bottom: 1rem;
+}
+.course a {
+  color: black;
+  text-decoration: none;
+}
+.course-content {
+  padding: 0 4rem 2rem;
+}
+.course-content h2 {
+  background-color: darkorange;
+  color: black;
+  padding: 2rem;
+  text-align: center;
+  margin: 0 -4rem 3rem;
+}
+
+
+
+/* Media queries */
+@media screen and (min-width: 1120px) {
+  .area {
+    display: flex;
+  }
+  aside {
+    flex: 0 0 32rem;
+  }
+  .header-title {
+    font-size: 5rem;
+  }
+}

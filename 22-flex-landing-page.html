@@ -4,10 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Landing Page</title>
-    <link rel="shortcut icon" type="image/x-icon" href="backgrounds/background1.jpg">
-    <script src="https://kit.fontawesome.com/0d1b9a5725.js" crossorigin="anonymous"></script>
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="backgrounds/background1.jpg"
+    />
+    <script
+      src="https://kit.fontawesome.com/0d1b9a5725.js"
+      crossorigin="anonymous"
+    ></script>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+      :root {
+        --background-color: #000;
+        --principal-color: #fff;
+        --secondary-color: blue;
+        --title-color: gray;
+      }
+
       * {
         box-sizing: border-box;
         padding: 0;
@@ -15,8 +29,8 @@
       }
       html {
         font-size: 10px;
-        color: white;
-        font-family: "Roboto", sans-serif;
+        color: var(--principal-color);
+        font-family: 'Roboto', sans-serif;
       }
       a {
         text-decoration: none;
@@ -25,7 +39,7 @@
         list-style: none;
       }
       header {
-        background-color: black;
+        background-color: var(--background-color);
         height: 80px;
       }
       header .container {
@@ -58,8 +72,12 @@
         font-weight: 600;
       }
       header nav ul li:hover {
-        color: aqua;
+        color: var(--secondary-color);
         cursor: pointer;
+      }
+      header nav.principalMenu-mobile {
+        display: none;
+        align-self: center;
       }
       section.banner {
         background-image: url(backgrounds/background6.jpg);
@@ -83,7 +101,7 @@
       section.banner button {
         border: none;
         border-radius: 3rem;
-        color: blue;
+        color: var(--secondary-color);
         font-size: 1.4rem;
         font-weight: 600;
         padding: 1.8rem 2.7rem;
@@ -94,7 +112,7 @@
         transform: scale(104%, 104%);
       }
       footer {
-        background-color: black;
+        background-color: var(--background-color);
       }
       footer section.container {
         width: 90%;
@@ -123,10 +141,10 @@
       }
       footer .secondaryMenu ul li:hover {
         cursor: pointer;
-        color: blue;
+        color: var(--secondary-color);
       }
       footer .secondaryMenu ul .title {
-        color: gray;
+        color: var(--title-color);
         font-weight: bold;
         font-size: 1.2rem;
       }
@@ -150,11 +168,20 @@
         align-items: center;
       }
       footer .social ul li:hover {
-        color: blue;
+        color: var(--secondary-color);
         cursor: pointer;
       }
       footer .location {
-        color: blue;
+        width: 100%;
+        margin-top: 10rem;
+        display: flex;
+        justify-content: flex-end;
+        font-size: 1.2rem;
+        color: var(--title-color);
+        gap: 0.5rem;
+      }
+      footer .location:hover {
+        color: var(--secondary-color);
         cursor: pointer;
       }
       footer .location span {
@@ -163,7 +190,7 @@
       }
       footer .location i {
         align-self: center;
-        color: white;
+        color: var(--principal-color);
       }
       footer .extras {
         width: 100%;
@@ -176,20 +203,39 @@
         flex-wrap: wrap;
         margin: 0 4.5rem 0 0;
       }
-      footer .extras ul li{
+      footer .extras ul li {
         font-size: 1.1rem;
-        color: gray;
+        color: var(--title-color);
         padding: 0.5rem 1rem;
       }
-      footer .extras ul li:hover{
-        color: blue;
+      footer .extras ul li:hover {
+        color: var(--secondary-color);
         cursor: pointer;
       }
-      footer .extras span{
-        font-size: 1.rem;
-        color: gray;
+      footer .extras span {
+        font-size: 1rem;
+        color: var(--title-color);
         padding-right: 1rem;
         align-self: center;
+      }
+      @media (max-width: 768px) {
+        header nav.principalMenu {
+          display: none;
+        }
+        header nav.principalMenu-mobile {
+          display: inline;
+        }
+        section.banner h1 {
+          font-size: 6rem;
+        }
+        footer .secondaryMenu {
+          width: 100%;
+          margin: 2rem auto;
+          flex-direction: column;
+        }
+        footer .company, footer .community, footer .links {
+          margin-top: 2rem;
+        }
       }
     </style>
   </head>
@@ -208,6 +254,9 @@
             <li>Contact</li>
             <li>About Us</li>
           </ul>
+        </nav>
+        <nav class="principalMenu-mobile">
+          <i class="fa-solid fa-bars fa-2xl"></i>
         </nav>
       </div>
     </header>
