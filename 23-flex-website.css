@@ -81,10 +81,94 @@ main {
   text-align: center;
   margin: 0 -4rem 3rem;
 }
-
-
+/* Recent course */
+.recent-title {
+  color: black;
+  font-size: 3rem;
+  text-align: center;
+}
+.recent-card {
+  margin-bottom: 1rem;
+}
+.recent-content {
+  background-color: black;
+  color: white;
+  padding: 3rem;
+}
+.recent-content h2 {
+  font-size: 3rem;
+  font-weight: 300;
+  margin: 0;
+  text-transform: capitalize;
+}
+.recent-info {
+  font-weight: bold;
+}
+.recent-info span {
+  padding-right: 1.5rem;
+}
+.recent-text {
+  margin: 1rem 0;
+}
+.recent-content a {
+  color: white;
+  font-weight: bold;
+}
+/* Downloads */
+.downloads-card {
+  margin-bottom: 1rem;
+}
+.downloads-content {
+  background-color: white;
+}
+.downloads-content a {
+  background-color: black;
+  color: white;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+.downloads-content a i {
+  font-size: 2.5rem;
+}
+.downloads-info {
+  padding: 1rem 2rem;
+}
+.downloads-info h4 {
+  margin: 0;
+}
+.downloads-info p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+.downloads-users img {
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+}
+.downloads-stats {
+  background-color: darkorange;
+  padding: 1rem 2rem;
+  color: black;
+  font-size: .9rem;
+}
+.downloads-stats .rate {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: -.25rem;
+}
 
 /* Media queries */
+@media screen and (min-width: 810px) {
+  .courses {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .course {
+    flex-basis: 49%;
+  }
+}
 @media screen and (min-width: 1120px) {
   .area {
     display: flex;
@@ -94,5 +178,14 @@ main {
   }
   .header-title {
     font-size: 5rem;
+  }
+  .courses-three {
+    flex-basis: 32%;
+  }
+  .courses-two {
+    flex-basis: 49%;
+  }
+  .courses-one {
+    flex-basis: 100%;
   }
 }
